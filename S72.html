@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script type="text/javascript">
+    var m=11;
+    </script>
+        <style type="text/css">
+        .cuadro{
+            position: absolute;
+            border:black;
+            height: 30%;
+            width: 30%; 
+            background-color: #E7B8FF;
+            left: 34%; 
+            top: 15%;
+            font-size: 90px;
+            text-align: center;
+            font-family: Cosmos Logic Demo Version;
+        }
+
+
+    </style>
+</head>
+<body onload="iniciar()">
+
+<script>
+function iniciar(){
+    setTimeout(reloj,2000);
+}
+function reloj(){
+    tiempo=setInterval(menos,1000)
+}
+function menos(){
+    m=m-1;
+    document.getElementById('Con').innerHTML=(m);
+    if (m==0) {
+        clearInterval(tiempo);
+        var x=document.getElementById('Con').innerHTML=("TERMINO... BYE")
+    }
+}
+
+</script>
+    <div id="Con" class="cuadro"> HELLO WORLD</div>
+</body>
+</html>
